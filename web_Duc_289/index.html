@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB kể truyện</title>
+    <meta charset="utf-8" />
+    <script>
+        function generateStory() {
+            var k1 = document.getElementById("k1").value;
+            var k2 = document.getElementById("k2").value;
+            var k3 = document.getElementById("k3").value;
+
+            fetch("api.aspx?k1=" + encodeURIComponent(k1) + "&k2=" + encodeURIComponent(k2) + "&k3=" + encodeURIComponent(k3))
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("result").innerText = data.story || data.error;
+                })
+                .catch(err => {
+                    document.getElementById("result").innerText = "Lỗi: " + err;
+                });
+        }
+    </script>
+</head>
+<body>
+    <h2>WEB kể truyện</h2>
+    <input type="text" id="k1" placeholder="Keyword 1"><br><br>
+    <input type="text" id="k2" placeholder="Keyword 2"><br><br>
+    <input type="text" id="k3" placeholder="Keyword 3"><br><br>
+    <button onclick="generateStory()">Generate Story</button>
+
+    <h3>Kết quả:</h3>
+    <pre id="result"></pre>
+</body>
+</html>
