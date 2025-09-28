@@ -1,6 +1,9 @@
 HỌ  TÊN: NGUYỄN TIẾN ĐỨC_K225480106081
 
 
+BÀI TOÁN: KỂ  CHUYỆN BẰNG CÁCH GHÉP TỪ
+
+
 BÀI  TẬP VỀ   NHÀ: TẠO SOLUTION GỒM CÁC PROJECT SAU: ###
 1. DLL đa năng, keyword: c# window library -› **Class Library (-NET Framework)**: giải bài toán bất kỳ, độc lạ càng tốt, có dấu ấn cá nhân trong kết quả, biên dịch ra
 
